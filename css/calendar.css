@@ -1,0 +1,205 @@
+/**
+ * 设置日历的大小
+ */
+.calarea{
+  width: 65%;
+  height: 100%;
+  font-size:200%;
+  background-color:white;
+  float:left;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+ 
+/**
+ * 设置日历顶部盒子
+ */
+.calarea .calendar-title-box{
+  position: relative;
+  width: 95%;
+  height: 12.5%;
+  margin:0 2.5% 0 2.5%;
+  padding:0 0 0 30px;
+  line-height: 400%;
+  /*border-bottom: 1px solid #ddd;*/
+}
+
+/**
+ * 设置上个月的按钮图标
+ */
+.calarea .prev-month-deactive {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 0px;
+  border-top: 20px solid transparent;
+  border-right: 25px solid #999;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+ .calarea .prev-month-active{
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 0px;
+  border-top: 20px solid transparent;
+  border-right: 25px solid #f99;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+ }
+ .calarea .calendar-title{
+  position:relative;
+  display:inline-block;
+  padding:0 0 0 20px;
+  font-family:Impact;
+  font-weight:bold;
+  font-size:50px;
+ }
+ .title-year{
+  color:#a2a2a2;
+ }
+/**
+ * 设置下个月的按钮图标
+ */
+.calarea .next-month-deactive {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: 0 0 0 20px;
+  border-right: 0px;
+  border-top: 20px solid transparent;
+  border-left: 25px solid #999;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+ .calarea .next-month-active {
+  position: relative;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  margin: 0 0 0 20px;
+  border-right: 0px;
+  border-top: 20px solid transparent;
+  border-left: 25px solid #f99;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+.calendar-body-box{
+	width: 95%;
+	height:87.5%;
+	margin:0 2.5% 0 2.5%;
+	overflow:hidden;
+}
+ 
+.calendar-head{
+	width: 100%;
+	height:12%;
+	border-collapse:collapse;
+	text-align:center;
+}
+/* 设置日历表格样式 */
+.calendar-table-5{
+  position:absolute;
+  width: 1090px;
+  height:700px;
+  /*left:15px;*/
+  table-layout:fixed ;
+  border-collapse:separate;
+  border-spacing:38px 20px;
+  font-size:40px;
+  text-align:center;
+  }
+.calendar-table-6{
+  position:absolute;
+  width: 1090px;
+  height:700px;
+  /*left:15px;*/
+  table-layout:fixed ;
+  border-collapse:separate;
+  border-spacing:40px 6px;
+  font-size:38px;
+  text-align:center;
+}
+.calendar-table-6 td {
+  height:100px;
+}
+.calendar-table-5 td {
+  height:100px;
+}
+.calendar-table-nextmonth{
+  left:1070px;
+}
+.calendar-table-premonth{
+  left:-1070px;
+}
+.calendar-move-active{
+  -webkit-transition:left 1s;	
+}
+
+@-webkit-keyframes tablechange /* Safari 和 Chrome */
+{
+0%   {left: 0px;}
+90%  {left: -1000px;}
+100% {left: 0px;}
+}
+/* 表格行高 */
+.firstline{
+  font-family:youyuan;
+  font-size:36px;
+  color:white;
+
+}
+.firstline-left{
+  border-top-left-radius:60px;
+  border-bottom-left-radius:60px;	
+}
+.firstline-right{
+  border-top-right-radius:60px;
+  border-bottom-right-radius:60px;
+}
+
+.calcdate{
+	font-family:youyuan;
+	font-size:20px;
+}
+
+/* 当前天 颜色特殊显示 */
+.currentDay {
+  color: white;
+  border-radius:80px;
+}
+.calendar-table-5 .selected {
+  border:4px solid #3282eb;
+  border-radius:80px;
+  box-sizing:border-box !important;
+}
+.calendar-table-6 .selected {
+  border:4px solid #3282eb;
+  border-radius:80px;
+  box-sizing:border-box !important;
+}
+
+
+ 
+/* 本月 文字颜色 */
+.currentMonth {
+  color: #4b4b50;
+  border-radius:80px;
+}
+ 
+/* 其他月颜色 */
+.otherMonth{
+  color: #c2c2c2;
+}
+/* 其他月颜色 */
+.preMonth{
+  color: #c2c2c2;
+}
+/* 其他月颜色 */
+.nextMonth{
+  color: #c2c2c2;
+}
